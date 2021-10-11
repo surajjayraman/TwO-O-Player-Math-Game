@@ -5,19 +5,15 @@ class Game
   
     def initialize(player1, player2)
       @player1 = player1
-      @plater2 = player2
+      @player2 = player2
       @current_player = @player1
     end
   
-   def nextTurn
-      puts "----- NEW TURN -----"
-      if @current_player == self.player1
-        puts "prev turn was player1"
-        # puts player2.inspect
-        # self.current_player = self.player2
+    def switchPlayer
+      if self.current_player == self.player1
+        self.current_player = self.player2
       else
-        puts "prev turn was player2"
-        # self.current_player = self.player1
+        self.current_player = self.player1
       end 
     end
   
@@ -28,4 +24,4 @@ class Game
       exit(0)
     end
   
-  end 
+  end
